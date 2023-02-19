@@ -1,2 +1,2 @@
-# Flowers Shop
+# Flowers Shop - Blume
 Прекрасный сайт для цветочной лавки в Архангельске
