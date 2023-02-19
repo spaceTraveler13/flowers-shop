@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blume</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- OG TAGS -->
+	<meta property="og:title" content="Blume.Стильные букеты в Архангельске с доставкой">
+	<meta property="og:description" content="Стильные букеты в Архангельске с доставкой в любую точку города в течении часа">
+	<meta name="description" content="Стильные букеты в Архангельске с доставкой в любую точку города в течении часа">
+	<meta property="og:type" content="arcticle">
+	<meta property="og:image" content="">
+	<meta property="vk:image" content="">
+	<meta property="og:site-name" content="Blume">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Prata&display=swap" rel="stylesheet">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media-quaires.css">
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <section class="offer-section" id="offer-section">    
+        <div class="container" id="container">
+            <header class="header" id="header">
+                <div class="header-body">
+                    <div class="nav" id="nav">
+                        <div class="burger-btn" id="burger-btn">
+                            <span></span>
+                        </div>
+                        <a href="#offer-section" class="logo"></a>
+                            <ul class="menu-list">
+                                <li class="menu-list__item"><a href="#popular">популярные букеты</a></li>
+                                <li class="menu-list__item"><a href="#guide">доставка и оплата</a></li>
+                                <li class="menu-list__item"><a href="#review">отзывы</a></li>
+                                <li class="menu-list__item"><a href="#contacts">контакты</a></li>
+                            </ul>
+                            <ul class="burger-menu" id="burger-menu">
+                                <li class="burger-menu__item"><a href="#popular">популярные букеты</a></li>
+                                <li class="burger-menu__item"><a href="#guide">доставка и оплата</a></li>
+                                <li class="burger-menu__item"><a href="#review">отзывы</a></li>
+                                <li class="burger-menu__item"><a href="#contacts">контакты</a></li>
+                                <div class="burger-tel">
+                                    <a href="#!" class="img-tel"></a>
+                                    <a href="tel:89600177158" class="menu-tel">8-960-017-71-58</a>
+                                </div>
+                                <div class="burger-social">
+                                    <a href="https://vk.com/blume_29" rel="nofollow nooponer noreferrer" target="_blank">
+                                        <img src="img/VK.svg" class="social-img" alt="картинка ВК">
+                                    </a>
+                                    <a href="https://t.me/AggroNoli Games" rel="nofollow nooponer noreferrer" target="_blank">
+                                        <img src="img/Telegram.svg" class="social-img" alt="картинка телеграмм">
+                                    </a>
+                                    <a href="https://www.viber.com/89600177158" rel="nofollow nooponer noreferrer" target="_blank">
+                                        <img src="img/Viber.svg" class="social-img" alt="картинка вайбер">
+                                    </a>
+                                    <a href="https://www.WhatsApp.com/89600177158" rel="nofollow nooponer noreferrer" target="_blank">
+                                        <img src="img/WhatsApp.svg" class="social-img" alt="картинка ватсап">
+                                    </a>
+                                </div>
+                            </ul>
+                        <div class="tel-box">
+                            <a href="#!" class="img-tel"></a>
+                            <a href="tel:89600177158" class="menu-tel">8-960-017-71-58</a>
+                        </div>
+                    </div>
+                </div>   
+            </header>
+            <div class="offer-wrapper">
+                <div class="offer">
+                    <h1 class="offer-text">Стильные букеты в Архангельске</h1>
+                    <p class="offer-desc">Доставим свежий букет в течение часа в любую точку города</p>
+                    <button type="button" class="offer-btn" id="offer-btn">заказать букет</button>
+                </div>
+                <!-- Modal Window -->
+                <div class="modal-wrapper">
+                    <div id="overlay-order"></div>
+                    <div class="modal-window">
+                        <button type="button" id="close-modal" class="modal-close">
+                            <img src="img/close-btn.svg" class="close-btn" alt="Кнопка закрытия">
+                        </button>
+                        <h2 class="form-text">Заказ букета</h2>
+                        <p class="form-desc">Оставьте свои данные и мы перезвоним вам для уточнения деталей заказа</p>
+                        <form class="form-offer" method="get" action="#!" id="form-offer">
+                            <div class="input-box__name">
+                                <input type="text" class="form-input" name="name" placeholder="Ваше имя" required>
+                            </div>    
+                            <div class="input-box__tel">
+                                <input type="text" class="form-input" name="tel" placeholder="8-xxx-xx-xx" required> 
+                            </div>
+                            <div class="input-box__select">
+                                <label for="boquets-select"></label>
+                                <select name="boquets" id="boquets-select" form="form-offer">
+                                    <option>-- ваш букет --</option>
+                                        <option value="Воздушный">Воздушный</option>
+                                        <option value="Зефирный">Зефирный</option>
+                                        <option value="Гармония">Гармония</option>
+                                        <option value="Яркость чувств">Яркость чувств</option>
+                                        <option value="Страсть">Страсть</option>
+                                        <option value="Изумрудный">Изумрудный</option>
+                                        <option value="Гортензии">Гортензии</option>
+                                        <option value="Розы кустовые">Розы кустовые</option>
+                                        <option value="Тюльпаны">Тюльпаны</option>
+                                        <option value="Пионы">Пионы</option>
+                                        <option value="Хризантемы кустовые">Хризантемы кустовые</option>
+                                        <option value="Розы красные">Розы красные</option>
+                                        <option value="Гипсофилы">Гипсофилы</option>
+                                        <option value="Розы белые">Розы белые</option>
+                                        <option value="Лилии">Лилии</option>
+                                        <option value="Композиция Котик">Композиция Котик</option>
+                                        <option value="Композиция в вазе">Композиция в вазе</option>
+                                        <option value="Композиция Облако">Композиция Облако</option>
+                                        <option value="Композиция с гипсофилой">Композиция с гипсофилой</option>
+                                        <option value="Композиция Цветочный конверт">Композиция Цветочный конверт</option>
+                                        <option value="Композиция в шляпной коробке">Композиция в шляпной коробке</option>
+                                </select>
+                            </div>
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="form-checkbox__real" id="checkbox__real-offer" name="checkbox">
+                                <label for="form-checkbox__real" class="form-checkbox" required>   
+                                    <p class="form-checkbox__text">Нажимая на кнопку, вы соглашаетесь на обработку <a href="#!" class="form-policy">персональных данных</a></p>
+                                </label>
+                            </div>
+                            <button type="submit" class="form-btn">отправить</button>
+                        </form>
+                        <div class="success-mess" id="success-offer">
+                            <h2 class="success-mess__title">Спасибо, ваши данные отправлены!</h2>
+                            <p class="success-mess__text">Наш флорист свяжется с вами в ближайшее время.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Слайдер -->
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <div class="slider__item">
+                            <img src="img/img-offer-1.jpg" class="radius-img" alt="фото">
+                        </div>
+                        <div class="slider__item">
+                            <img src="img/img-offer-2.jpg" class="radius-img" alt="фото">
+                        </div>
+                        <div class="slider__item">
+                            <img src="img/img-offer-3.jpg" class="radius-img" alt="фото">
+                        </div>
+                        <div class="slider__item">
+                            <img src="img/img-offer-4.jpg" class="radius-img" alt="фото">
+                        </div>
+                    </div>
+                    <!-- Малый слайдер -->
+                    <div class="slider-small">
+                        <div class="slider-small__item">
+                            <img src="img/small-img1.jpg" class="small-img" alt="фото">
+                        </div>
+                        <div class="slider-small__item">
+                            <img src="img/small-img2.jpg" class="small-img" alt="фото">
+                        </div>
+                        <div class="slider-small__item">
+                            <img src="img/small-img3.jpg" class="small-img" alt="фото">
+                        </div>
+                        <div class="slider-small__item">
+                            <img src="img/small-img4.jpg" class="small-img" alt="фото">
+                        </div>
+                    </div>
+                </div>
+                <div class="abilities-wrapper">
+                    <button type="button" class="abilities-btn offer-btn" id="abilities-btn">заказать букет</button>
+                    <div class="offer-abilities">
+                        <div class="abilities-item">
+                            <img src="img/icon-flowers.svg" alt="" class="abilities-img">
+                            <p class="abilities-item__desc">
+                                Всегда свежие цветы
+                            </p>
+                        </div>
+                        <div class="abilities-item">
+                            <img src="img/icon-watch.svg" alt="" class="abilities-img">
+                            <p class="abilities-item__desc">
+                                Доставляем за 60 минут
+                            </p>
+                        </div>
+                        <div class="abilities-item">
+                            <img src="img/icon-moto.svg" alt="" class="abilities-img">
+                            <p class="abilities-item__desc">
+                                Бесплатная доставка от 2000 ₽
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular" id="popular">
+        <div class="container" id="container">
+            <div class="section-title">
+                <h2 class="title-text">
+                    Популярные букеты
+                </h2>
+                <p class="title-desc">
+                    Выбирайте эксклюзивные авторские или классические букеты
+                    в любой ценовой категории и на любой вкус.
+                </p>
+            </div>
+            <!-- ТАБЫ -->
+            <div class="tabs-wrapper" id="tabs-wrapper">
+                <div class="tabs">
+                    <div class="tab active" data-btn="1">авторские букеты</div>
+                    <div class="tab" data-btn="2">монобукеты</div>
+                    <div class="tab" data-btn="3">композиции в шляпных коробках</div>
+                </div>
+                <div class="contents-wrapper">
+                    <div class="content active" data-slider="1">
+                        <div class="popular-slider-wrapper">
+                            <div class="popular1-arrows" data-action="counter-box">
+                                <div class="counter">
+                                    <h2 class="counter-num" data-action="popular1">1</h2>
+                                    <h2 class="counter-itr-num">2</h2>
+                                </div>
+                            </div>
+                            <div class="popular1-slider">
+                                <div class="popular-slider__item" data-item="1">
+                                    <img src="img/img-autors1.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="1">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Воздушный
+                                        </p>
+                                        <span class="item-price">от 2800 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="2">
+                                    <img src="img/img-autors2.jpg" class="radius-left-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="2">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Зефирный
+                                        </p>
+                                        <span class="item-price">от 4600 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="3">
+                                    <img src="img/img-autors3.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="3">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Гармония
+                                        </p>
+                                        <span class="item-price">от 3400 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item"data-item="4">
+                                    <img src="img/img-autors4.jpg" class="radius-left-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="4">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Яркость чувств
+                                        </p>
+                                        <span class="item-price">от 4200 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item"data-item="5">
+                                    <img src="img/img-autors5.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="5">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Страсть
+                                        </p>
+                                        <span class="item-price">от 3000 ₽ </span>
+                                    </div>                                    
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item"data-item="6">
+                                    <img src="img/img-autors6.jpg" class="radius-rigth-bottom" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="6">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Изумрудный
+                                        </p>
+                                        <span class="item-price">от 3150 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" data-slider="2">
+                        <div class="popular-slider-wrapper">
+                            <div class="popular2-arrows" data-action="counter-box">
+                                <div class="counter">
+                                    <h2 class="counter-num" data-action="popular2">1</h2>
+                                    <h2 class="counter-itr-num">3</h2>
+                                </div>
+                            </div>
+                            <div class="popular2-slider">
+                                <div class="popular-slider__item" data-item="1">
+                                    <img src="img/img-mono1.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="1">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Гортензии
+                                        </p>
+                                        <span class="item-price">от 850 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="2">
+                                    <img src="img/img-mono2.jpg" class="radius-left-top " alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="2">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Розы кустовые
+                                        </p>
+                                        <span class="item-price">от 230 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="3">
+                                    <img src="img/img-mono3.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="3">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Тюльпаны
+                                        </p>
+                                        <span class="item-price">от 120 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="4">
+                                    <img src="img/img-mono4.jpg" class="radius-left-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="4">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Пионы
+                                        </p>
+                                        <span class="item-price">от 280 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="5">
+                                    <img src="img/img-mono5.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="5">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Хризантемы кустовые
+                                        </p>
+                                        <span class="item-price">от 220 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>                                   
+                                </div>
+                                <div class="popular-slider__item" data-item="6">
+                                    <img src="img/img-mono6.jpg" class="radius-rigth-bottom" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="6">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Розы красные
+                                        </p>
+                                        <span class="item-price">от 130 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="7">
+                                    <img src="img/img-mono7.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="7">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Гипсофилы
+                                        </p>
+                                        <span class="item-price">от 250 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="8">
+                                    <img src="img/img-mono8.jpg" class="radius-rigth-bottom" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="8">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Розы белые
+                                        </p>
+                                        <span class="item-price">от 190 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="9">
+                                    <img src="img/img-mono9.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="9">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Букет Лилии
+                                        </p>
+                                        <span class="item-price">от 450 ₽<span class="item-one">/шт</span></span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-slider="3">
+                        <div class="popular-slider-wrapper">
+                            <div class="popular3-arrows" data-action="counter-box">
+                                <div class="counter">
+                                    <h2 class="counter-num"  data-action="popular3">1</h2>
+                                    <h2 class="counter-itr-num">2</h2>
+                                </div>
+                            </div>
+                            <div class="popular3-slider">
+                                <div class="popular-slider__item" data-item="1">
+                                    <img src="img/img-box1.jpg" class="radius-left-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="1">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция Котик
+                                        </p>
+                                        <span class="item-price">от 1700 ₽ </span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="2">
+                                    <img src="img/img-box2.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="2">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция в вазе
+                                        </p>
+                                        <span class="item-price">от 1900 ₽ </span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="3">
+                                    <img src="img/img-box3.jpg" class="radius-rigth-bottom" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="3">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция Облако
+                                        </p>
+                                        <span class="item-price">от 2300 ₽ </span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="4">
+                                    <img src="img/img-box4.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="4">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция с гипсофилой
+                                        </p>
+                                        <span class="item-price">от 1500 ₽ </span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="5">
+                                    <img src="img/img-box5.jpg" class="radius-left-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="5">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция Цветочный конверт
+                                        </p>
+                                        <span class="item-price">от 1300 ₽</span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                                <div class="popular-slider__item" data-item="6">
+                                    <img src="img/img-box6.jpg" class="radius-top" alt="фото">
+                                    <button class="slider-btn offer-btn" id="slider-btn" data-btn="6">заказать букет</button>
+                                    <div class="popular-item__desc">
+                                        <p class="item-title">
+                                            Композиция в шляпной коробке
+                                        </p>
+                                        <span class="item-price">от 2850 ₽ </span>
+                                    </div>
+                                    <button type="button" class="slider-btn-small offer-btn" id="abilities-btn">заказать букет</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="guide" id="guide">
+        <div class="container" id="container">
+            <h2 class="title-text position">
+                Как заказать букет
+            </h2>
+            <div class="guide-wrapper">   
+                <div class="guide-items">
+                    <div class="guide-item">
+                        <h3 class="item-title-guide">
+                        <span class="item-counter">01</span>Выбор букета
+                        </h3>
+                        <p class="item-desc">
+                            Выберите букет, заполните форму заказа или позвоните нам
+                        </p>
+                    </div>
+                    <div class="guide-item">
+                        <h3 class="item-title-guide">
+                            <span class="item-counter">02</span>Уточнение деталей 
+                        </h3>
+                        <p class="item-desc">
+                            Мы свяжемся с вами для уточнения деталей
+                        </p>
+                    </div>
+                    <div class="guide-item">
+                        <h3 class="item-title-guide">
+                        <span class="item-counter">03</span>Оплата
+                        </h3>
+                        <p class="item-desc">
+                            Вы можете оплатить заказ по карте или наличными курьеру
+                        </p>
+                    </div>
+                </div>
+                <div class="guide-imgs">
+                    <img src="img/img-guide.jpg" alt="фото" class="guide-img radius-left-top">
+                    <img src="img/img-guide-small.jpg" alt="фото" class="guide-img-small">
+                </div>
+                <div class="guide-items second">
+                    <div class="guide-item">
+                    <h3 class="item-title-guide">
+                        <span class="item-counter">04</span>Сборка
+                    </h3>
+                    <p class="item-desc">
+                        Вышлем фото букета для согласования
+                    </p>
+                    </div>
+                    <div class="guide-item">
+                    <h3 class="item-title-guide">
+                        <span class="item-counter">05</span>Доставка
+                    </h3>
+                    <p class="item-desc">
+                        Доставим букет по адресу в указанное время
+                    </p>
+                    </div>
+                    <div class="guide-imgs tel-version">
+                        <img src="img/img-guide.jpg" alt="фото" class="guide-img radius-left-top">
+                        <img src="img/img-guide-small.jpg" alt="фото" class="guide-img-small">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="info">
+        <div class="container" id="container">
+            <div class="info-wrapper">
+                <div class="img-wrapper">
+                <img src="img/img-guide2.jpg" alt="фото" class="info-img">
+                </div>
+                <div class="info-items">
+                    <h2 class="info-item__title title-text">
+                        Бережно и с любовью к каждому букету
+                    </h2>
+                    <p class="info-item__desc">
+                        У нас вы попадаете в атмосферу красоты и восхитительных ароматов.
+                        Каким бы ни был повод, каждому гостю мы предлагаем индивидуальный подход.
+                        Наш ассортимент — это всегда свежие и качественные цветы от лучших мировых плантаций,
+                        из которых флористы создают композиции любой сложности.
+                        У нас вы найдете идеальный подарок для тех, кто вам дорог!
+                    </p>
+                    <div class="info-table">
+                        <p class="info-table__text">
+                            <span class="info-table__number">7</span> лет создаем для вас букеты
+                        </p>
+                        <p class="info-table__text">
+                            <span class="info-table__number">1000+</span>созданных букетов для наших клиентов
+                        </p>
+                        <p class="info-table__text">
+                            <span class="info-table__number">800+</span>положительных отзывов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review" id="review">
+        <div class="container" id="container">
+            <div class="review-title-box">
+                <h2 class="review-title title-text">
+                    Что говорят о нас покупатели
+                </h2>
+                <div class="review-arrows" data-action="counter-box">
+                    <div class="counter">
+                        <h2 class="counter-num" data-num="num">1</h2>
+                        <h2 class="counter-itr-num">5</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-review-wrapper">
+                <div class="slider-review">
+                    <div class="slider-review__item">
+                        <img src="img/img-review1.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review1-1.jpg" alt="фото" class="img-review">
+                    </div>    
+                    <div class="slider-review__item">
+                        <img src="img/img-review1-2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review1-3.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review2-1.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review2-2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review2-3.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review3.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review3-1.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review3-2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review3-3.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review4.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review4-1.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review4-2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review4-3.jpg" alt="фото" class="img-review">
+                    </div> 
+                    <div class="slider-review__item">
+                        <img src="img/img-review5.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review5-1.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review5-2.jpg" alt="фото" class="img-review">
+                    </div>
+                    <div class="slider-review__item">
+                        <img src="img/img-review5-3.jpg" alt="фото" class="img-review">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions" id="questions">
+        <div class="container" id="container">
+            <h2 class="question-title title-text">
+                Часто задаваемые вопросы
+            </h2>
+            <div class="questions-wrapper">
+                <div class="questions-items">
+                    <div class="question-item" data-item="1" data-items="ass">
+                        <div class="question-item-box">
+                            <h3 class="question-item__title">
+                                Сколько будет стоить доставка?
+                            </h3>              
+                            <p class="question-item__desc" data-desc="1">
+                                При заказе от 2000 рублей доставка в пределах центра города бесплатна.
+                                За пределы города от 150 рублей. 
+                                Актуальные цены необходимо уточнять у менеджера при заказе.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question-item" data-item="2" data-items="ass">
+                        <div class="question-item-box">
+                            <h3 class="question-item__title">
+                                Создаете букеты по фотографии?   
+                            </h3>
+                            <p class="question-item__desc" data-desc="2">
+                                Да, мы создаем букеты по фотографиям и индивидуальным пожеланиям.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question-item" data-item="3" data-items="ass">
+                        <div class="question-item-box">
+                            <h3 class="question-item__title">
+                                Какие цветы более стойкие?
+                            </h3>
+                            <p class="question-item__desc" data-desc="3">
+                                <span>1. Хризантемы</span> 
+                                <span>2. Орхидеи</span> 
+                                <span>3. Альстромерии</span> 
+                                <span>4. Герберы</span> 
+                                <span>5. Розы</span> 
+                            </p>
+                        </div>                       
+                    </div>
+                    <div class="question-item" data-item="4" data-items="ass">
+                        <div class="question-item-box">
+                            <h3 class="question-item__title">
+                                Как продлить жизнь цветам?
+                            </h3>
+                            <p class="question-item__desc" data-desc="4">
+                                1)	Воду в вазе нужно менять как минимум раз в два дня, а лучше — ежедневно, при этом стоит ополаскивать как вазу, так и стебли цветов.
+                                2)	Подгнивающие концы необходимо срезать.
+                                3) Добавьте в свежую воду подкормку (Chrysal).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-wrapper-question" class="modal-questions">
+                    <p class="form-desc">Если у вас остались вопросы, оставьте свои данные и мы вам перезвоним</p>
+                    <form class="form-offer" method="get" action="#!" id="form-question">
+                        <div class="input-box__name">
+                            <input type="text" class="form-input" name="name" placeholder="Ваше имя" required>
+                        </div>    
+                        <div class="input-box__tel">
+                            <input type="text" class="form-input" name="tel" placeholder="8-xxx-xx-xx" required> 
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="form-checkbox__real" id="checkbox__real" name="checkbox">
+                            <label for="form-checkbox__real" class="form-checkbox">   
+                                <p class="form-checkbox__text">Нажимая на кнопку, вы соглашаетесь на обработку <a href="#!" class="form-policy">персональных данных</a></p>
+                            </label>
+                        </div>
+                        <button type="submit" id="form-question-btn" class="form-btn">отправить</button>
+                    </form>
+                    <div class="success-quest success-mess" id="success-quest">
+                        <h2 class="success-mess__title">Спасибо, ваш вопрос отправлен!</h2>
+                        <p class="success-mess__text">Наш флорист свяжется с вами в ближайшее время.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <h2 class="contacts-title title-text">
+                    Контакты
+                </h2>
+                <div class="data-contacts">
+                    <div class="social">
+                        <p class="social-text">
+                            Вы можете связаться с нами любым удобным способом:
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://vk.com/blume_29" rel="nofollow nooponer noreferrer" target="_blank">
+                                <img src="img/VK.svg" class="social-img" alt="картинка ВК">
+                            </a>
+                            <a href="https://t.me/aggroNoli_games" rel="nofollow nooponer noreferrer" target="_blank">
+                                <img src="img/Telegram.svg" class="social-img" alt="картинка телеграмм">
+                            </a>
+                            <a href="viber://chat&number=%2B89600177158" rel="nofollow nooponer noreferrer" target="_blank">
+                                <img src="img/Viber.svg" class="social-img" alt="картинка вайбер">
+                            </a>
+                            <a href="https://wa.me/89600177158" rel="nofollow nooponer noreferrer" target="_blank">
+                                <img src="img/WhatsApp.svg" class="social-img" alt="картинка ватсап">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="phones">
+                        <p class="phones-title">
+                            Телефоны:
+                        </p>
+                        <h3 class="phones-tel">
+                            +7-952-303-83-29
+                        </h3>
+                        <h3 class="phones-tel">
+                            +7-960-017-71-58
+                        </h3>
+                    </div>
+                    <div class="address">
+                        <p class="address-title">
+                            Адреса:
+                        </p>
+                        <h3 class="address-desc">
+                            Поморская, 51
+                        </h3>
+                        <h3 class="address-desc">
+                            Наб. Северной Двины, 32
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container" id="container">
+            <div class="footer-wrapper">
+                <img src="img/logo-nav.svg" alt="логотип" class="logo-footer"> 
+                <div class="section-list">
+                    <p class="section-list__item">
+                        популярные букеты
+                    </p>
+                    <p class="section-list__item">
+                        доставка и оплата
+                    </p>
+                    <p class="section-list__item">
+                        отзывы
+                    </p>
+                    <p class="section-list__item">
+                        контакты
+                    </p>
+                </div>
+                <a href="#!" class="privacy-policy">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <p class="lisence">
+                © Все права защищены 2022
+            </p>
+        </div> 
+    </footer>
+    <!-- подключаем jquery -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU & amp;apikey=<0041bb77-2c88-4eca-a47d-8ab6ce4b7f8c>"></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- подключаем слайдер -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
