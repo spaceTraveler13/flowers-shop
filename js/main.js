@@ -294,8 +294,9 @@ formOffer.addEventListener('submit', function(e){
     e.preventDefault();
     if(checkboxOffer.checked){
         let message = `<b>Заявка с сайта</b>\n`;
-        message += `<b>Отправитель:</b> ${this.name.value}\n`;
-        message += `<b>Телефон:</b> ${this.tel.value}`;
+            message += `<b>Отправитель:</b> ${this.name.value}\n`;
+            message += `<b>Телефон:</b> ${this.tel.value}\n`;
+            message += `<b>Букет:</b> ${this.boquets.value}`;
     axios.post(uriApi, {
         chat_id:chatId,
         parse_mode:'html',
