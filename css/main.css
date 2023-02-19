@@ -58,6 +58,17 @@ input{
 	margin: 0;
 	padding: 0;
 }
+select,option{
+    min-height: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #301229;
+    border: none;
+    background: #FAF7F9;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
 
 /* ---LOADER--- */
 
@@ -326,7 +337,7 @@ input{
     font-size: 14px;
     color: #B3B7BB;
 }
-.input-box__name,.input-box__tel{
+.input-box__name,.input-box__tel,.input-box__select{
     display: flex;
     align-items: center;
     border-bottom: 1px solid #B3B7BB;
@@ -334,32 +345,42 @@ input{
 }
 .input-box__name:hover,
 .input-box__tel:hover,
+.input-box__select:hover,
 .form-input:hover::placeholder
 {
     border-color:#301229;
     color: #301229;
 }
+.input-box__name::before, .input-box__tel::before{
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 13px;
+}
 .input-box__name::before{
     content: '';
     background: url(../img/icon-input.svg)no-repeat;
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin-right: 13px;
 }
 .input-box__tel::before{
     content: '';
     background: url(../img/icon-tel-input.svg)no-repeat;
-    width: 22px;
-    height: 22px;
+}
+.input-box__select::before{
+    content: '';
+    background: url(../img/flowmodal2.svg)no-repeat;
+    width: 30px;
+    height: 25px;
     display: block;
-    margin-right: 13px;
+    margin-right: 7px;
 }
 .input-box__name:hover::before{
     background: url(../img/icon-input-name-hover.svg)no-repeat;
 }
 .input-box__tel:hover::before{
     background: url(../img/icon-input-hover.svg)no-repeat;
+}
+.input-box__select:hover::before{
+    background: url(../img/flowmodal-hover.svg)no-repeat;
 }
 .checkbox-wrapper{
     display: flex;
