@@ -274,7 +274,7 @@ select,option{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 478px;
-    height: 450px;
+    height: 478px;
     z-index: 10;
     background-color: #FAF7F9;
     position: fixed;
