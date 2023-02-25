@@ -1208,3 +1208,35 @@ select,option{
 .balloon-address{
     margin: 10px 0px 7px;
 }
+
+/* THANKS-PAGE */
+
+.style-center{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+.popup-box{
+    max-width: 740px;
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-box__desc{
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.popup_box__link{
+    margin: auto;
+    transition: all 0.5s ease;
+}
+.popup_box__link:hover{
+    transform: rotate(360deg);
+}
+.popup-box__btn{
+    max-width: 320px;
+    padding: 20px;
+}
