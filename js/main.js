@@ -283,8 +283,6 @@ const token = '5896828511:AAEiDBUhNM9x4qDDYqEhhgnJ1PiMlgErwjI';
 // const chatId = '-1001839678616'; blume29-tg-source
 const chatId = '1784239120';
 const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
-const successMessage = document.getElementById('success-quest');
-const successOffer = document.getElementById('success-offer');
 const reload = () => location.reload();
 const formOffer = document.getElementById('form-offer');
 const formQuestion = document.getElementById('form-question');
@@ -305,7 +303,7 @@ formOffer.addEventListener('submit', function(e){
     .then((result) =>{
         this.name.value = '';
         this.tel.value = '';
-        successOffer.style.display = 'block';
+        location.href = '/thanks-page.html'
     })
     .catch((error) =>{
         console.log(error);
