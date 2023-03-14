@@ -1,4 +1,4 @@
-//----- SLIDERS----//
+// ---- SLIDERS ----
 $(document).ready(function (){    
     $('.slider').slick({
         arrows:false,
@@ -137,14 +137,14 @@ $(document).ready(function (){
         ],
     })
 });
-//-----MODAL-WINDOW----//
+// ---- MODAL-WINDOW ----
 $('#offer-btn,#abilities-btn').on('click', function () {
     $('.modal-wrapper').toggle();
 })
 $('.modal-close,#overlay-order').on('click', function () {
     $('.modal-wrapper').hide();
 })
-// ---LOADER--- //
+// ---- LOADER- --- 
 let loader = document.querySelector('.loader-wrapper');
 let loaderInit = () =>{
     window.addEventListener('load',() => {
@@ -155,14 +155,14 @@ let loaderInit = () =>{
     })
 }
 loaderInit();
-// ---BURGER-MENU---//
+// ---- BURGER-MENU ----
 const burgerBtn = document.querySelector('.burger-btn');
 const burgerMenu = document.querySelector('.burger-menu');
 burgerBtn.addEventListener('click', ()=>{
     burgerMenu.classList.toggle('vision')
     burgerBtn.classList.toggle('vision')
 })
-// ----TABS-----//
+// ---- TABS ----
 const tabs = document.querySelector('.tabs');
 const contents = document.querySelector('.contents-wrapper');
 const changeClass = (el) => {
@@ -185,8 +185,8 @@ for(tab of tabs.children){
         } 
     })   
 }      
-// ----QUESTION----//
 window.addEventListener('click', (e)=>{
+    // ---- QUESTION ----
     if(e.target.dataset.items === 'ass'){
        let dataItem = e.target.closest('[data-item]')
        let dataDesc = dataItem.querySelector ('.question-item__desc')
@@ -195,9 +195,7 @@ window.addEventListener('click', (e)=>{
             dataItem.classList.toggle('dagger')
        }
     }
-})
-    // ----COUNTER---- // 
-window.addEventListener('click', (e)=>{
+     // ---- COUNTER ---- 
     let totalNumb;
     let numb;
     if(e.target.textContent === 'Next' || e.target.textContent === 'Previous'){
@@ -214,9 +212,10 @@ window.addEventListener('click', (e)=>{
         if(parseInt(numb.innerText) > 1) {
             numb.innerText = --numb.innerText;
         }
-    }   
-}) 
-// ----BUTTONS IN POPULAR CARDS--- //
+    }
+
+})
+// ---- BUTTONS IN POPULAR CARDS ---- 
 const slideItem = document.querySelectorAll('.popular-slider__item');
 const sliderBtn = document.querySelectorAll('.slider-btn');
 const modalWindow = document.querySelector('.modal-wrapper')
@@ -237,7 +236,7 @@ slideItem.forEach((item)=>{
         })
     })
 })
-// ----MAP----//
+// ---- MAP ----
 function init() {
     let map = new ymaps.Map('map', {
         center: [64.53950575169014,40.53234117474925],
@@ -277,18 +276,14 @@ function init() {
     map.controls.remove('rulercontrol');
 }   
 ymaps.ready(init);
-// ---SEND MESSAGE---//
-// const token = '5889186084:AAHNVVeoKYwBce41EYKO9Kr7yPgHNTyBN60'; blume29-tg-source
+// ---- AXIOS SEND MESSAGE ----
 const token = '5896828511:AAEiDBUhNM9x4qDDYqEhhgnJ1PiMlgErwjI';
-// const chatId = '-1001839678616'; blume29-tg-source
 const chatId = '1784239120';
 const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
 const reload = () => location.reload();
-const formOffer = document.getElementById('form-offer');
-const formQuestion = document.getElementById('form-question');
 let checkbox = document.getElementById('checkbox__real');
 let checkboxOffer = document.getElementById('checkbox__real-offer');
-formOffer.addEventListener('submit', function(e){
+document.getElementById('form-offer').addEventListener('submit', function(e){
     e.preventDefault();
     if(checkboxOffer.checked){
         let message = `<b>Заявка с сайта</b>\n`;
@@ -313,7 +308,7 @@ formOffer.addEventListener('submit', function(e){
     })
     }
 })
-formQuestion.addEventListener('submit', function(e){
+document.getElementById('form-question').addEventListener('submit', function(e){
         e.preventDefault();
         if(checkbox.checked){
             let message = `<b>Вопрос с сайта</b>\n`;
@@ -327,7 +322,7 @@ formQuestion.addEventListener('submit', function(e){
         .then((result) =>{
             this.name.value = '';
             this.tel.value = '';
-            successMessage.classList.add('look');
+            document.querySelector('#success-quest').classList.add('look');
         })
         .catch((error) =>{
             console.log(error);
