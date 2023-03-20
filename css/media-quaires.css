@@ -728,6 +728,11 @@
 		padding-bottom: 80px;
 	}
 	/* ---POPULAR-SECTION--- */
+	.tab.active {
+		background-color: #C136A4;
+		color: #fff;
+		padding: 12px;
+	}
 	.title-text{
 		font-size: 24px;
 	}
