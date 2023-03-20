@@ -156,12 +156,6 @@ let loaderInit = () =>{
 }
 loaderInit();
 
-// const burgerBtn = document.querySelector('.burger-btn');
-// const burgerMenu = document.querySelector('.burger-menu');
-// burgerBtn.addEventListener('click', ()=>{
-//     burgerMenu.classList.toggle('vision')
-//     burgerBtn.classList.toggle('vision')
-// })
 // ---- TABS ----
 const tabs = document.querySelector('.tabs');
 const contents = document.querySelector('.contents-wrapper');
