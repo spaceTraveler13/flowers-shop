@@ -155,13 +155,13 @@ let loaderInit = () =>{
     })
 }
 loaderInit();
-// ---- BURGER-MENU ----
-const burgerBtn = document.querySelector('.burger-btn');
-const burgerMenu = document.querySelector('.burger-menu');
-burgerBtn.addEventListener('click', ()=>{
-    burgerMenu.classList.toggle('vision')
-    burgerBtn.classList.toggle('vision')
-})
+
+// const burgerBtn = document.querySelector('.burger-btn');
+// const burgerMenu = document.querySelector('.burger-menu');
+// burgerBtn.addEventListener('click', ()=>{
+//     burgerMenu.classList.toggle('vision')
+//     burgerBtn.classList.toggle('vision')
+// })
 // ---- TABS ----
 const tabs = document.querySelector('.tabs');
 const contents = document.querySelector('.contents-wrapper');
@@ -186,6 +186,17 @@ for(tab of tabs.children){
     })   
 }      
 window.addEventListener('click', (e)=>{
+    // ---- BURGER-MENU ----
+    const burgerMenu = document.querySelector('.burger-menu');
+    const burgeritem = document.querySelectorAll('.burger-menu__item');
+    if(e.target.classList == 'burger-btn' ){
+        burgerMenu.classList.toggle('vision');
+    }
+    burgeritem.forEach(function(item){
+        item.addEventListener('click', function(){
+            burgerMenu.classList.toggle('vision')
+        }) 
+    })
     // ---- QUESTION ----
     if(e.target.dataset.items === 'ass'){
        let dataItem = e.target.closest('[data-item]')
