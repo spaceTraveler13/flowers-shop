@@ -194,7 +194,7 @@ window.addEventListener('click', (e)=>{
     }
     burgeritem.forEach(function(item){
         item.addEventListener('click', function(){
-            burgerMenu.classList.toggle('vision')
+            burgerMenu.classList.remove('vision')
         }) 
     })
     // ---- QUESTION ----

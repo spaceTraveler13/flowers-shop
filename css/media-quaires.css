@@ -749,7 +749,28 @@
 	.popular-slider-wrapper{
 		max-width: 320px;
 	}
+	.contents-wrapper{
+		padding-top: 40px;
+	}
 	.contents-wrapper::after{
+		display: none;
+	}
+	.popular1-arrows, .popular2-arrows, .popular3-arrows{
+		display: flex;
+		width: 100%;
+		top: -10px;
+		justify-content: space-between;
+	}
+	.popular1-arrows .slick-next,
+	 .popular2-arrows .slick-next,
+	  .popular3-arrows .slick-next,
+	   .popular1-arrows .slick-prev,
+	    .popular2-arrows .slick-prev,
+		 .popular3-arrows .slick-prev {
+			width: 40px;
+			height: 40px;
+		 }
+	.counter{
 		display: none;
 	}
 	.popular-item__desc{
