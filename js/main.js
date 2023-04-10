@@ -6,8 +6,12 @@ $(document).ready(function (){
         slidesToShow:1,
         adaptiveWidth:true,
         autoplay:true,
-        speed:500,
+        speed:300,
         asNavFor: '.slider-small',
+        dragable: false,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
         responsive:[
             {
                 breakpoint:767,
@@ -21,7 +25,11 @@ $(document).ready(function (){
         arrows: false,
         dots: false,
         fade: true,
-        asNavFor: '.slider'
+        asNavFor: '.slider',
+        dragable: false,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
     })
     $('.popular1-slider').slick({
         arrows: true,
