@@ -214,106 +214,101 @@ function init() {
     map.controls.remove('rulercontrol');
 }   
 ymaps.ready(init);
-// ---SEND MESSAGE---//
-// const token = '5889186084:AAHNVVeoKYwBce41EYKO9Kr7yPgHNTyBN60';
-const token = '6189317131:AAEnq3w2A3r6vhfOvXj2zJmzvRixjbirPqA';
-
-// const chatId = '-1001839678616';
-const chatId = '-1001957657031';
-const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
-const successMessage = document.getElementById('success-quest');
-const successOffer = document.getElementById('success-offer');
-const reload = () => location.reload();
-const formOffer = document.getElementById('form-offer');
-const formPop = document.getElementById('form-popular')
-const formQuestion = document.getElementById('form-question');
-const checkbox = document.getElementById('checkbox__real');
-const checkboxOffer = document.getElementById('checkbox__real-offer');
-const checkBoxPop = document.getElementById('checkbox__real-pop')
-// ---TEL-MASK--- //
-const forms = document.querySelectorAll('form')
-forms.forEach((form) => {
-    const telField = form.querySelector('input[type="tel"]')
-    const inputMask = new Inputmask('+79999999999');
-    inputMask.mask(telField);
-}) 
-// ---AXIOS---- //
-formOffer.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(checkboxOffer.checked){
-        let message = `<b>Заявка с сайта</b>\n`;
-            message += `<b>Отправитель:</b> ${this.name.value}\n`;
-            message += `<b>Телефон:</b> ${this.tel.value}\n`;
-            message += `<b>Букет:</b> ${this.boquets.value}`;
-    axios.post(uriApi, {
-        chat_id:chatId,
-        parse_mode:'html',
-        text:message
-    })
-    .then((result) =>{
-        this.name.value = '';
-        this.tel.value = '';
-        this.boquets.value = '';
-        location.href = '/thanks-page.html'
-    })
-    .catch((error) =>{
-        console.log(error);
-    })
-    .finally(() =>{
-        setTimeout(reload,1500)
-    })
-    }
-})
-formPop.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(checkBoxPop.checked){
-        let message = `<b>Заявка с сайта</b>\n`;
-            message += `<b>Отправитель:</b> ${this.name.value}\n`;
-            message += `<b>Телефон:</b> ${this.tel.value}\n`;
-            message += `<b>Букет:</b> ${boquetName.textContent.trim()}`;
-    axios.post(uriApi, {
-        chat_id:chatId,
-        parse_mode:'html',
-        text:message
-    })
-    .then((result) =>{
-        this.name.value = '';
-        this.tel.value = '';
-        // this.boquets.value = '';
-        location.href = '/thanks-page.html'
-    })
-    .catch((error) =>{
-        console.log(error);
-    })
-    .finally(() =>{
-        setTimeout(reload,1500)
-    })
-    }  
-})
-formQuestion.addEventListener('submit', function(e){
-        e.preventDefault();
-        if(checkbox.checked){
-            let message = `<b>Вопрос с сайта</b>\n`;
-            message += `<b>Отправитель:</b> ${this.name.value}\n`;
-            message += `<b>Телефон:</b> ${this.tel.value}`;
-        axios.post(uriApi, {
-            chat_id:chatId,
-            parse_mode:'html',
-            text:message
-        })
-        .then((result) =>{
-            this.name.value = '';
-            this.tel.value = '';
-            successMessage.classList.add('look');
-        })
-        .catch((error) =>{
-            console.log(error);
-        })
-        .finally(() =>{
-            setTimeout(reload,1500)
-        })
-        }
-})
+// // ---SEND MESSAGE---//
+// const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
+// const successMessage = document.getElementById('success-quest');
+// const successOffer = document.getElementById('success-offer');
+// const reload = () => location.reload();
+// const formOffer = document.getElementById('form-offer');
+// const formPop = document.getElementById('form-popular')
+// const formQuestion = document.getElementById('form-question');
+// const checkbox = document.getElementById('checkbox__real');
+// const checkboxOffer = document.getElementById('checkbox__real-offer');
+// const checkBoxPop = document.getElementById('checkbox__real-pop')
+// // ---TEL-MASK--- //
+// const forms = document.querySelectorAll('form')
+// forms.forEach((form) => {
+//     const telField = form.querySelector('input[type="tel"]')
+//     const inputMask = new Inputmask('+79999999999');
+//     inputMask.mask(telField);
+// }) 
+// // ---AXIOS---- //
+// formOffer.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     if(checkboxOffer.checked){
+//         let message = `<b>Заявка с сайта</b>\n`;
+//             message += `<b>Отправитель:</b> ${this.name.value}\n`;
+//             message += `<b>Телефон:</b> ${this.tel.value}\n`;
+//             message += `<b>Букет:</b> ${this.boquets.value}`;
+//     axios.post(uriApi, {
+//         chat_id:chatId,
+//         parse_mode:'html',
+//         text:message
+//     })
+//     .then((result) =>{
+//         this.name.value = '';
+//         this.tel.value = '';
+//         this.boquets.value = '';
+//         location.href = '/thanks-page.html'
+//     })
+//     .catch((error) =>{
+//         console.log(error);
+//     })
+//     .finally(() =>{
+//         setTimeout(reload,1500)
+//     })
+//     }
+// })
+// formPop.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     if(checkBoxPop.checked){
+//         let message = `<b>Заявка с сайта</b>\n`;
+//             message += `<b>Отправитель:</b> ${this.name.value}\n`;
+//             message += `<b>Телефон:</b> ${this.tel.value}\n`;
+//             message += `<b>Букет:</b> ${boquetName.textContent.trim()}`;
+//     axios.post(uriApi, {
+//         chat_id:chatId,
+//         parse_mode:'html',
+//         text:message
+//     })
+//     .then((result) =>{
+//         this.name.value = '';
+//         this.tel.value = '';
+//         // this.boquets.value = '';
+//         location.href = '/thanks-page.html'
+//     })
+//     .catch((error) =>{
+//         console.log(error);
+//     })
+//     .finally(() =>{
+//         setTimeout(reload,1500)
+//     })
+//     }  
+// })
+// formQuestion.addEventListener('submit', function(e){
+//         e.preventDefault();
+//         if(checkbox.checked){
+//             let message = `<b>Вопрос с сайта</b>\n`;
+//             message += `<b>Отправитель:</b> ${this.name.value}\n`;
+//             message += `<b>Телефон:</b> ${this.tel.value}`;
+//         axios.post(uriApi, {
+//             chat_id:chatId,
+//             parse_mode:'html',
+//             text:message
+//         })
+//         .then((result) =>{
+//             this.name.value = '';
+//             this.tel.value = '';
+//             successMessage.classList.add('look');
+//         })
+//         .catch((error) =>{
+//             console.log(error);
+//         })
+//         .finally(() =>{
+//             setTimeout(reload,1500)
+//         })
+//         }
+// })
 
 // PRODUCT PAGE
 const btnMore = document.querySelectorAll('.product-link')

@@ -48,36 +48,34 @@ cardBtn.addEventListener('click', function(e) {
         })
         boquetName.textContent = titleName
     })
-// AXIOS PRODUCT CARD
-const token = '6189317131:AAEnq3w2A3r6vhfOvXj2zJmzvRixjbirPqA';
-const chatId = '-1001957657031';
-const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
-const successMessage = document.getElementById('success-quest');
-const successOffer = document.getElementById('success-offer');
-const reload = () => location.reload();
-const formCard = document.getElementById('form-card');
-const checkboxCard = document.getElementById('checkbox__real-card');
-// ---AXIOS---- //
-formCard.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(checkboxCard.checked){
-        let message = `<b>Заявка с сайта</b>\n`;
-            message += `<b>Отправитель:</b> ${this.name.value}\n`;
-            message += `<b>Телефон:</b> ${this.tel.value}\n`;
-            message += `<b>Букет:</b> ${boquetName.textContent.trim()}`;
-    axios.post(uriApi, {
-        chat_id:chatId,
-        parse_mode:'html',
-        text:message
-    })
-    .then((result) =>{
-        location.href = '/index.html'
-    })
-    .catch((error) =>{
-        console.log(error);
-    })
-    .finally(() =>{
-        setTimeout(reload,1500)
-    })
-    }
-})
+// // AXIOS PRODUCT CARD
+// const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
+// const successMessage = document.getElementById('success-quest');
+// const successOffer = document.getElementById('success-offer');
+// const reload = () => location.reload();
+// const formCard = document.getElementById('form-card');
+// const checkboxCard = document.getElementById('checkbox__real-card');
+// // ---AXIOS---- //
+// formCard.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     if(checkboxCard.checked){
+//         let message = `<b>Заявка с сайта</b>\n`;
+//             message += `<b>Отправитель:</b> ${this.name.value}\n`;
+//             message += `<b>Телефон:</b> ${this.tel.value}\n`;
+//             message += `<b>Букет:</b> ${boquetName.textContent.trim()}`;
+//     axios.post(uriApi, {
+//         chat_id:chatId,
+//         parse_mode:'html',
+//         text:message
+//     })
+//     .then((result) =>{
+//         location.href = '/index.html'
+//     })
+//     .catch((error) =>{
+//         console.log(error);
+//     })
+//     .finally(() =>{
+//         setTimeout(reload,1500)
+//     })
+//     }
+// })
