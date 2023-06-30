@@ -133,7 +133,7 @@ for(tab of tabs.children){
 
 // ----QUESTION,COUNTER,BURGER-MENU----//
 window.addEventListener('click', (e)=>{
-  
+
     // ---- BURGER-MENU ----
     const burgerMenu = document.querySelector('.burger-menu');
     const burgeritem = document.querySelectorAll('.burger-menu__item');
@@ -145,15 +145,21 @@ window.addEventListener('click', (e)=>{
             burgerMenu.classList.remove('vision')
         }) 
     })
+
     // ---- QUESTION ----
     if(e.target.dataset.items === 'ass'){
-       let dataItem = e.target.closest('[data-item]')
-       let dataDesc = dataItem.querySelector ('.question-item__desc')
-       if(dataItem.dataset.item === dataDesc.dataset.desc){
-            dataDesc.classList.toggle('show')
+        let dataItem = e.target.closest('[data-item]')
+        let dataDesc = dataItem.querySelector ('.question-item__desc')
+        if(dataItem.dataset.item === dataDesc.dataset.desc){
             dataItem.classList.toggle('dagger')
-       }
+        }
+        if(dataDesc.style.maxHeight) {
+            dataDesc.style.maxHeight = null
+        } else {
+            dataDesc.style.maxHeight = dataDesc.scrollHeight + 'px'
+        }
     }
+    
     //--- COUNTER--- //
     let totalNumb;
     let numb;
@@ -173,7 +179,6 @@ window.addEventListener('click', (e)=>{
         }
     }
 })
-
 // ----MAP----//
 function init() {
     let map = new ymaps.Map('map', {

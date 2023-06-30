@@ -68,8 +68,7 @@ h6 {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: 'Prata', serif, sans-serif;
     font-weight: 400;
 }
@@ -624,6 +623,8 @@ option {
 
 .boquet-name {
     margin-bottom: 15px;
+    font-family: 'Prata', serif, sans-serif;
+    font-weight: 400;
 }
 
 /* ---SUCCESS-MESSAGE--- */
@@ -1182,15 +1183,9 @@ option {
     line-height: 1.5em;
     flex-direction: column;
     display: flex;
-    position: absolute;
-    margin-top: -130px;
-    opacity: 0;
-    transition: margin-top 0.5s, opacity 1s;
-}
-
-.question-item__desc.show {
-    margin-top: 0px;
-    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
 }
 
 .questions-items {
@@ -1205,6 +1200,7 @@ option {
     cursor: pointer;
     padding: 30px 0;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .question-item::after {
