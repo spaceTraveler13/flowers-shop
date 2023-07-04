@@ -1444,6 +1444,49 @@ option {
     align-items: flex-end;
 }
 
+/* PROMO-BANNER */
+.promo-box {
+    text-align: center;
+    background: #F3E7F1;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 100%;
+    max-width: 330px;
+    padding: 40px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px 0px #DB4FBD;
+    display: none;
+    transform: translateX(380px);
+    transition: all 0.5s ease-in;
+}
+
+.show-banner {
+    transform: translateX(10px);
+}
+
+.promo-img {
+    margin-bottom: 10px;
+}
+
+.promo-title {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+.promo-desc:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.promo-desc span {
+    font-weight: 600;
+}
+
 /* ---MAPS-CONTENT--- */
 
 [class*='balloon'] {

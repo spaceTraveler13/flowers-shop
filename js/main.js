@@ -1,11 +1,23 @@
-// ---LOADER--- //
-let loader = document.querySelector('.loader-wrapper');
-let loaderInit = () =>{
+// ---LOADER AND POROMOBANNER //
+const loaderInit = () =>{
     window.addEventListener('load',() => {
-        loader.classList.add('loader-out');
+        document.querySelector('.loader-wrapper').classList.add('loader-out');
+        let banner = document.querySelector('.promo-box')
         setTimeout(() =>{
-            loader.remove()
+            document.querySelector('.loader-wrapper').remove()
         },600);
+        setTimeout(()=> {
+            banner.style.display = 'flex'
+        },2000)
+        setTimeout(()=> {
+            banner.classList.add('show-banner')
+        },2100)
+        setTimeout(()=> {
+            banner.classList.remove('show-banner')
+        },7000)
+        setTimeout(()=> {
+            banner.style.display = 'none'
+        },9500)
     })
 }
 loaderInit();
