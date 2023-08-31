@@ -5,6 +5,8 @@ let localData = JSON.parse(localStorage.getItem('card'))
 // РЕНДЕРИМ НА СТРАНИЦУ
 const renderBox = document.querySelector('.product-data')
 function renderData (data) {
+    let text = data.desc
+    
     let template = `<h1 class="product-name">${data.name}</h1>
                     <ul class="breadcrumb">
                         <li><a href="index.html">Главная</a></li>
@@ -17,13 +19,14 @@ function renderData (data) {
                         <div class="product-info">
                             <div class="product-desc">
                                 <h2 class="product-info__title">${data.name}</h2>
-                                <p class="product-info__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                         do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                         aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                         deserunt mollit anim id est laborum."
-                                </p>
+                                <p class="product-info__text">
+                                <span>${text.trim().slice(0, 25)}</span>
+                                <span>${text.trim().slice(25, 100)}</span>
+                                <span>${text.trim().slice(100, 150)}</span>
+                                <span>${text.trim().slice(150, 210)}</span>
+                                <span>${text.trim().slice(210, 270)}</span>
+                                <span>${text.trim().slice(270, 350)}</span>
+                                <p>
                                 <span class="product-info__price">${data.price}</span>
                             </div>
                         <button type="button" class="product-info__btn form-btn">заказать букет</button>

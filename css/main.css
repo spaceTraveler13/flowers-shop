@@ -1618,6 +1618,9 @@ option {
 
 .product-info__text {
     margin: 10px 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-info__price {
@@ -1637,4 +1640,10 @@ option {
 .product-lisence {
     padding-bottom: 0;
     margin-top: 0;
+}
+
+.item-desc {
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }

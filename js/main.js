@@ -336,6 +336,7 @@ btnMore.forEach((btnItem)=> {
             img: e.target.parentElement.previousElementSibling.firstElementChild.src,
             name: e.target.parentElement.firstElementChild.textContent,
             price: e.target.parentElement.firstElementChild.nextElementSibling.textContent,
+            desc: e.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.textContent,
         }
         let dataToLocal = localStorage.setItem('card', JSON.stringify(cardData))
         location.href = 'product-page.html'
