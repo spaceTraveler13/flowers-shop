@@ -366,7 +366,7 @@ option {
 }
 
 .offer button:focus {
-    background-color: #AF2692;
+    background-color: #f00255;
 }
 
 /* ----MODAL WINDOW---- */
@@ -825,7 +825,7 @@ option {
 }
 
 .contents-wrapper button:focus {
-    background-color: #AF2692;
+    color: #301229;
 }
 
 .content.active {
@@ -891,10 +891,9 @@ option {
     cursor: pointer;
     background: none;
     border: none;
-    color: #896982;
-    font-size: 15px;
+    color: #AF2692;
+    font-size: 17px;
     outline: none;
-    border-bottom: 1px solid transparent;
     transition: all 0.3s;
     margin-top: 5px;
 }
@@ -905,7 +904,6 @@ option {
 
 .product-link:hover {
     color: #301229;
-    border-color: #301229;
 }
 
 /* ---GUIDE-SECTION--- */

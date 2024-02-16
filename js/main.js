@@ -2,22 +2,22 @@
 const loaderInit = () =>{
     window.addEventListener('load',() => {
         document.querySelector('.loader-wrapper').classList.add('loader-out');
-        let banner = document.querySelector('.promo-box')
-        setTimeout(() =>{
-            document.querySelector('.loader-wrapper').remove()
-        },600);
-        setTimeout(()=> {
-            banner.style.display = 'flex'
-        },2000)
-        setTimeout(()=> {
-            banner.classList.add('show-banner')
-        },2100)
-        setTimeout(()=> {
-            banner.classList.remove('show-banner')
-        },7000)
-        setTimeout(()=> {
-            banner.style.display = 'none'
-        },9500)
+        // let banner = document.querySelector('.promo-box')
+        // setTimeout(() =>{
+        //     document.querySelector('.loader-wrapper').remove()
+        // },600);
+        // setTimeout(()=> {
+        //     banner.style.display = 'flex'
+        // },2000)
+        // setTimeout(()=> {
+        //     banner.classList.add('show-banner')
+        // },2100)
+        // setTimeout(()=> {
+        //     banner.classList.remove('show-banner')
+        // },7000)
+        // setTimeout(()=> {
+        //     banner.style.display = 'none'
+        // },9500)
     })
 }
 loaderInit();
@@ -231,7 +231,7 @@ function init() {
     map.controls.remove('rulercontrol');
 }   
 ymaps.ready(init);
-// // ---SEND MESSAGE---//
+// // ---FLOW DATA CURRENT CARD---//
 // const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
 // const successMessage = document.getElementById('success-quest');
 // const successOffer = document.getElementById('success-offer');
@@ -334,13 +334,7 @@ btnMore.forEach((btnItem)=> {
     btnItem.addEventListener('click', (e)=> {        
         let cardData = {
             dataAtr: e.target.closest('[data-card]').getAttribute('data-card')
-            // img: e.target.parentElement.previousElementSibling.firstElementChild.src,
-            // name: e.target.parentElement.firstElementChild.textContent,
-            // price: e.target.parentElement.firstElementChild.nextElementSibling.textContent,
-            // desc: e.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.textContent,
         }
-        console.log("🚀 ~ file: main.js:342 ~ btnItem.addEventListener ~ cardData:", cardData)
-        // console.log("🚀 ~ file: main.js:341 ~ btnItem.addEventListener ~ cardData :", cardData.dataAtr )
         let dataToLocal = localStorage.setItem('card', JSON.stringify(cardData))
         location.href = 'product-page.html'
 })

@@ -7,42 +7,42 @@ let dataBoquetsArray = [
         name: 'Букет Воздушный',
         desc: 'Гортензия розовая - 1 шт.<br/>Роза куст - 3 шт.<br/> Роза Сорти крем - 3 шт.<br/> Гвоздика ст.белая - 4 шт.<br/> Зелень: полынь,<br/> Упаковка: плёнка',
         price: 3250,
-        img: '../img/img-autors1.webp'
+        img: 'img/img-autors1.webp'
     },
     {
         data: 'zeffo',
         name: 'Букет Зефирный',
         desc: 'Роза Кения - 7 шт.<br/>Эустома белая + фиолетов - 6 шт.<br/>Роза куст. - 5 шт.<br/>Гипсофила - 1 шт.<br/>Зелень: рябинник,<br/>Упаковка: плёнка + лента',
         price: 5200,
-        img: '../img/img-autors2.webp'
+        img: 'img/img-autors2.webp'
     },
     {
         data: 'garmony',
         name: 'Букет Гармония',
         desc: 'Аллиум - 1 шт.<br/>Эустома - 7 шт.<br/>Альстромерия - 3 шт.<br/>Гипсофила - 1 шт.<br/>Упаковка: плёнка + лента',
         price: 3400,
-        img: '../img/img-autors3.webp'
+        img: 'img/img-autors3.webp'
     },
     {
         data: 'feeling',
         name: 'Букет Яркость чувств',
         desc: 'Роза Эквадор - 7 шт.<br/>Роза куст - 6 шт.<br/>Эустома- 5 шт.<br/>Роза куст - 4 шт.<br/>Зелень: рябинник - 5 шт.<br/>Упаковка: плёнка + лента',
         price: 4200,
-        img: '../img/img-autors4.webp'
+        img: 'img/img-autors4.webp'
     },
     {
         data: 'passion',
         name: 'Букет Страсть',
         desc: ' Роза Эквадор - 7 шт.<br/>Роза куст - 6 шт.<br/>Эустома- 5 шт.<br/>Роза куст - 4 шт.<br/>Зелень: рябинник - 5 шт.<br/>Упаковка: плёнка + лента',
         price: 3000,
-        img: '../img/img-autors5.webp'
+        img: 'img/img-autors5.webp'
     },
     {
         data: 'emerald',
         name: 'Букет Изумрудный',
         desc: ' Роза сорти 5 - шт.<br/>Альстромерия - 4 шт.<br/>Эустома - 3 шт.<br/>Лагурус - 15 шт.<br/>Фисташка - 4 шт.<br/>Упаковка: фетр + плёнка + лента',
         price: 3650,
-        img: '../img/img-autors6.webp'
+        img: 'img/img-autors6.webp'
     },
 ]
 // РЕНДЕРИМ НА СТРАНИЦУ
