@@ -2,10 +2,11 @@
 const loaderInit = () =>{
     window.addEventListener('load',() => {
         document.querySelector('.loader-wrapper').classList.add('loader-out');
+        setTimeout(() =>{
+            document.querySelector('.loader-wrapper').remove()
+        },600);
         // let banner = document.querySelector('.promo-box')
-        // setTimeout(() =>{
-        //     document.querySelector('.loader-wrapper').remove()
-        // },600);
+        
         // setTimeout(()=> {
         //     banner.style.display = 'flex'
         // },2000)
