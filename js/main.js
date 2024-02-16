@@ -333,11 +333,14 @@ const cards = document.querySelectorAll('.popular-card')
 btnMore.forEach((btnItem)=> {
     btnItem.addEventListener('click', (e)=> {        
         let cardData = {
-            img: e.target.parentElement.previousElementSibling.firstElementChild.src,
-            name: e.target.parentElement.firstElementChild.textContent,
-            price: e.target.parentElement.firstElementChild.nextElementSibling.textContent,
-            desc: e.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.textContent,
+            dataAtr: e.target.closest('[data-card]').getAttribute('data-card')
+            // img: e.target.parentElement.previousElementSibling.firstElementChild.src,
+            // name: e.target.parentElement.firstElementChild.textContent,
+            // price: e.target.parentElement.firstElementChild.nextElementSibling.textContent,
+            // desc: e.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.textContent,
         }
+        console.log("🚀 ~ file: main.js:342 ~ btnItem.addEventListener ~ cardData:", cardData)
+        // console.log("🚀 ~ file: main.js:341 ~ btnItem.addEventListener ~ cardData :", cardData.dataAtr )
         let dataToLocal = localStorage.setItem('card', JSON.stringify(cardData))
         location.href = 'product-page.html'
 })

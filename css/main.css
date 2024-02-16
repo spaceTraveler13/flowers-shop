@@ -1642,7 +1642,7 @@ option {
     margin-top: 0;
 }
 
-.item-desc {
+.item-data {
     visibility: hidden;
     width: 0;
     height: 0;
