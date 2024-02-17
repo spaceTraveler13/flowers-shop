@@ -788,6 +788,14 @@
 	}
 
 	/* PRODUCT-PAGE */
+	.product-name {
+		text-align: center;
+	}
+
+	.breadcrumb {
+		justify-content: center;
+	}
+
 	.product-body {
 		flex-direction: column;
 		align-items: center;
