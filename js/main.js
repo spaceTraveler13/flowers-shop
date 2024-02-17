@@ -88,10 +88,14 @@ $(document).ready(function (){
 
 //-----MODAL-WINDOW-OFFER---//
 const offerBtn = document.querySelector('#modal-btn')
+const abilityBtn = document.querySelector('.abilities-btn')
 const offerModal = document.querySelector('.modal-wrapper')
 const offerOverlay = document.querySelector('.overlay-order')
 const offerCloseBtn = document.querySelector('.close-btn')
 offerBtn.addEventListener('click', ()=> {
+offerModal.style.display = 'block'
+})
+abilityBtn.addEventListener('click', ()=> {
 offerModal.style.display = 'block'
 })
 offerModal.addEventListener('click', (e)=> {
@@ -232,7 +236,7 @@ function init() {
     map.controls.remove('rulercontrol');
 }   
 ymaps.ready(init);
-// // ---FLOW DATA CURRENT CARD---//
+// ---FLOW DATA CURRENT CARD---//
 // const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
 // const successMessage = document.getElementById('success-quest');
 // const successOffer = document.getElementById('success-offer');
@@ -250,7 +254,7 @@ ymaps.ready(init);
 //     const inputMask = new Inputmask('+79999999999');
 //     inputMask.mask(telField);
 // }) 
-// // ---AXIOS---- //
+// ---AXIOS---- //
 // formOffer.addEventListener('submit', function(e){
 //     e.preventDefault();
 //     if(checkboxOffer.checked){

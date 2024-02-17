@@ -1157,4 +1157,9 @@
 		text-align: center;
 		margin-top: 5px;
 	}
+
+	.product-link {
+		font-size: 15px;
+		padding-bottom: 10px;
+	}
 }
