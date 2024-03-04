@@ -101,6 +101,7 @@ function renderData (currentCardAttr) {
                                         <span class="product-info__price">${dataBoquet.price} ₽</span>
                                     </div>
                                 <button type="button" class="product-info__btn form-btn">заказать букет</button>
+                                <a href="tel:89600177158" class="mobile-button offer-btn">заказать букет</a>
                             </div>`
             renderBox.insertAdjacentHTML('beforeend', template)
         }
