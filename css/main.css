@@ -883,6 +883,10 @@ option {
     color: #B3B7BB;
 }
 
+.popular-card__desc {
+    margin-bottom: 5px;
+}
+
 #modal-popular {
     display: none;
 }
