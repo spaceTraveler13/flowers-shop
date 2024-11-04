@@ -792,7 +792,7 @@ option {
     margin: 36px 0 69px;
     display: flex;
     border-bottom: 1px solid #EFEFEF;
-    max-width: 785px;
+    max-width: 985px;
 }
 
 .tab {
@@ -838,7 +838,8 @@ option {
 
 .autors,
 .monos,
-.hats {
+.hats,
+.rose {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
