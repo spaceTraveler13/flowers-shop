@@ -885,6 +885,7 @@ option {
 }
 
 .popular-card__desc {
+    max-width: 320px;
     margin-bottom: 5px;
 }
 
