@@ -792,7 +792,7 @@ option {
     margin: 36px 0 69px;
     display: flex;
     border-bottom: 1px solid #EFEFEF;
-    max-width: 985px;
+    justify-content: space-between;
 }
 
 .tab {
@@ -809,10 +809,6 @@ option {
 .tab:hover {
     border-bottom: 2px solid #C136A4;
     color: #DB4FBD;
-}
-
-.tab:not(:last-child) {
-    margin-right: 75px;
 }
 
 .tab.active {

@@ -70,6 +70,10 @@
 		margin: 0;
 	}
 
+	.tabs {
+		text-align: center;
+	}
+
 	/* ---GUIDE-SECTION--- */
 	.guide,
 	.review,
