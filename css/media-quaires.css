@@ -337,6 +337,7 @@
 
 	.content {
 		display: block;
+		padding-bottom: 20px;
 	}
 
 	.contents-wrapper {
