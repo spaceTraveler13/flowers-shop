@@ -916,6 +916,18 @@
 		margin: 0;
 	}
 
+	.radius-top {
+		border-radius: 120px 120px 0 0;
+	}
+
+	.radius-left-top {
+		border-radius: 120px 0 0;
+	}
+
+	.radius-rigth-bottom {
+		border-radius: 0 0 120px 0;
+	}
+
 	/* ---GUIDE-SECTION--- */
 	.guide,
 	.info,
