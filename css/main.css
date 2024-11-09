@@ -835,7 +835,9 @@ option {
 .autors,
 .monos,
 .hats,
-.rose {
+.rose,
+.chris,
+.sugars {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
