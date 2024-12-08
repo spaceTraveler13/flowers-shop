@@ -332,7 +332,7 @@
 	}
 
 	.tabs {
-		display: none;
+		/* display: none; */
 	}
 
 	.content {
